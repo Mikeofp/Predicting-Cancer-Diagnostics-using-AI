@@ -1,0 +1,768 @@
+﻿{
+  "Scenario": "Classification",
+  "DataSource": {
+    "Type": "TabularFile",
+    "Version": 1,
+    "FilePath": "C:\\Users\\migue\\OneDrive\\Ambiente de Trabalho\\datasets\\survey lung cancer.csv",
+    "Delimiter": ",",
+    "DecimalMarker": ".",
+    "HasHeader": true,
+    "ColumnProperties": [
+      {
+        "ColumnName": "GENDER",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "AGE",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "SMOKING",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "YELLOW_FINGERS",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "ANXIETY",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "PEER_PRESSURE",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "CHRONIC DISEASE",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "FATIGUE",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "ALLERGY",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "WHEEZING",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "ALCOHOL CONSUMING",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "COUGHING",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "SHORTNESS OF BREATH",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "SWALLOWING DIFFICULTY",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "CHEST PAIN",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "LUNG_CANCER",
+        "ColumnPurpose": "Label",
+        "ColumnDataFormat": "Boolean",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      }
+    ]
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "RunHistory": {
+    "Version": 3,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LbfgsLogisticRegressionBinary",
+        "Score": 0.91824901002611836,
+        "RuntimeInSeconds": 0.1,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e5",
+          "e0": {
+            "OutputColumnNames": [
+              "GENDER"
+            ],
+            "InputColumnNames": [
+              "GENDER"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "AGE",
+              "SMOKING",
+              "YELLOW_FINGERS",
+              "ANXIETY",
+              "PEER_PRESSURE",
+              "CHRONIC DISEASE",
+              "FATIGUE",
+              "ALLERGY",
+              "WHEEZING",
+              "ALCOHOL CONSUMING",
+              "COUGHING",
+              "SHORTNESS OF BREATH",
+              "SWALLOWING DIFFICULTY",
+              "CHEST PAIN"
+            ],
+            "InputColumnNames": [
+              "AGE",
+              "SMOKING",
+              "YELLOW_FINGERS",
+              "ANXIETY",
+              "PEER_PRESSURE",
+              "CHRONIC DISEASE",
+              "FATIGUE",
+              "ALLERGY",
+              "WHEEZING",
+              "ALCOHOL CONSUMING",
+              "COUGHING",
+              "SHORTNESS OF BREATH",
+              "SWALLOWING DIFFICULTY",
+              "CHEST PAIN"
+            ]
+          },
+          "e2": {
+            "InputColumnNames": [
+              "GENDER",
+              "AGE",
+              "SMOKING",
+              "YELLOW_FINGERS",
+              "ANXIETY",
+              "PEER_PRESSURE",
+              "CHRONIC DISEASE",
+              "FATIGUE",
+              "ALLERGY",
+              "WHEEZING",
+              "ALCOHOL CONSUMING",
+              "COUGHING",
+              "SHORTNESS OF BREATH",
+              "SWALLOWING DIFFICULTY",
+              "CHEST PAIN"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e5": {
+            "L1Regularization": 0.5803316,
+            "L2Regularization": 0.03125,
+            "LabelColumnName": "LUNG_CANCER",
+            "FeatureColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "LUNG_CANCER",
+            "FeatureColumnName": "Features"
+          },
+          "e4": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 1.0,
+            "NumberOfTrees": 4,
+            "SubsampleFraction": 1.0,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "LUNG_CANCER",
+            "FeatureColumnName": "Features"
+          },
+          "e6": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "LUNG_CANCER",
+            "FeatureColumnName": "Features"
+          },
+          "e7": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "LUNG_CANCER",
+            "FeatureColumnName": "Features"
+          },
+          "e8": {
+            "LabelColumnName": "LUNG_CANCER",
+            "ScoreColumnName": "Score"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LbfgsLogisticRegressionBinary",
+        "Score": 0.91824901002611836,
+        "RuntimeInSeconds": 0.086,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e5",
+          "e0": {
+            "OutputColumnNames": [
+              "GENDER"
+            ],
+            "InputColumnNames": [
+              "GENDER"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "AGE",
+              "SMOKING",
+              "YELLOW_FINGERS",
+              "ANXIETY",
+              "PEER_PRESSURE",
+              "CHRONIC DISEASE",
+              "FATIGUE",
+              "ALLERGY",
+              "WHEEZING",
+              "ALCOHOL CONSUMING",
+              "COUGHING",
+              "SHORTNESS OF BREATH",
+              "SWALLOWING DIFFICULTY",
+              "CHEST PAIN"
+            ],
+            "InputColumnNames": [
+              "AGE",
+              "SMOKING",
+              "YELLOW_FINGERS",
+              "ANXIETY",
+              "PEER_PRESSURE",
+              "CHRONIC DISEASE",
+              "FATIGUE",
+              "ALLERGY",
+              "WHEEZING",
+              "ALCOHOL CONSUMING",
+              "COUGHING",
+              "SHORTNESS OF BREATH",
+              "SWALLOWING DIFFICULTY",
+              "CHEST PAIN"
+            ]
+          },
+          "e2": {
+            "InputColumnNames": [
+              "GENDER",
+              "AGE",
+              "SMOKING",
+              "YELLOW_FINGERS",
+              "ANXIETY",
+              "PEER_PRESSURE",
+              "CHRONIC DISEASE",
+              "FATIGUE",
+              "ALLERGY",
+              "WHEEZING",
+              "ALCOHOL CONSUMING",
+              "COUGHING",
+              "SHORTNESS OF BREATH",
+              "SWALLOWING DIFFICULTY",
+              "CHEST PAIN"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e5": {
+            "L1Regularization": 0.03125,
+            "L2Regularization": 0.11905276,
+            "LabelColumnName": "LUNG_CANCER",
+            "FeatureColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "LUNG_CANCER",
+            "FeatureColumnName": "Features"
+          },
+          "e4": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 1.0,
+            "NumberOfTrees": 4,
+            "SubsampleFraction": 1.0,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "LUNG_CANCER",
+            "FeatureColumnName": "Features"
+          },
+          "e6": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "LUNG_CANCER",
+            "FeatureColumnName": "Features"
+          },
+          "e7": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "LUNG_CANCER",
+            "FeatureColumnName": "Features"
+          },
+          "e8": {
+            "LabelColumnName": "LUNG_CANCER",
+            "ScoreColumnName": "Score"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LbfgsLogisticRegressionBinary",
+        "Score": 0.91741567669278512,
+        "RuntimeInSeconds": 0.089,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e5",
+          "e0": {
+            "OutputColumnNames": [
+              "GENDER"
+            ],
+            "InputColumnNames": [
+              "GENDER"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "AGE",
+              "SMOKING",
+              "YELLOW_FINGERS",
+              "ANXIETY",
+              "PEER_PRESSURE",
+              "CHRONIC DISEASE",
+              "FATIGUE",
+              "ALLERGY",
+              "WHEEZING",
+              "ALCOHOL CONSUMING",
+              "COUGHING",
+              "SHORTNESS OF BREATH",
+              "SWALLOWING DIFFICULTY",
+              "CHEST PAIN"
+            ],
+            "InputColumnNames": [
+              "AGE",
+              "SMOKING",
+              "YELLOW_FINGERS",
+              "ANXIETY",
+              "PEER_PRESSURE",
+              "CHRONIC DISEASE",
+              "FATIGUE",
+              "ALLERGY",
+              "WHEEZING",
+              "ALCOHOL CONSUMING",
+              "COUGHING",
+              "SHORTNESS OF BREATH",
+              "SWALLOWING DIFFICULTY",
+              "CHEST PAIN"
+            ]
+          },
+          "e2": {
+            "InputColumnNames": [
+              "GENDER",
+              "AGE",
+              "SMOKING",
+              "YELLOW_FINGERS",
+              "ANXIETY",
+              "PEER_PRESSURE",
+              "CHRONIC DISEASE",
+              "FATIGUE",
+              "ALLERGY",
+              "WHEEZING",
+              "ALCOHOL CONSUMING",
+              "COUGHING",
+              "SHORTNESS OF BREATH",
+              "SWALLOWING DIFFICULTY",
+              "CHEST PAIN"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e5": {
+            "L1Regularization": 0.03125,
+            "L2Regularization": 0.03125,
+            "LabelColumnName": "LUNG_CANCER",
+            "FeatureColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "LUNG_CANCER",
+            "FeatureColumnName": "Features"
+          },
+          "e4": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 1.0,
+            "NumberOfTrees": 4,
+            "SubsampleFraction": 1.0,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "LUNG_CANCER",
+            "FeatureColumnName": "Features"
+          },
+          "e6": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "LUNG_CANCER",
+            "FeatureColumnName": "Features"
+          },
+          "e7": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "LUNG_CANCER",
+            "FeatureColumnName": "Features"
+          },
+          "e8": {
+            "LabelColumnName": "LUNG_CANCER",
+            "ScoreColumnName": "Score"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LbfgsLogisticRegressionBinary",
+        "Score": 0.91741567669278512,
+        "RuntimeInSeconds": 0.097,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e5",
+          "e0": {
+            "OutputColumnNames": [
+              "GENDER"
+            ],
+            "InputColumnNames": [
+              "GENDER"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "AGE",
+              "SMOKING",
+              "YELLOW_FINGERS",
+              "ANXIETY",
+              "PEER_PRESSURE",
+              "CHRONIC DISEASE",
+              "FATIGUE",
+              "ALLERGY",
+              "WHEEZING",
+              "ALCOHOL CONSUMING",
+              "COUGHING",
+              "SHORTNESS OF BREATH",
+              "SWALLOWING DIFFICULTY",
+              "CHEST PAIN"
+            ],
+            "InputColumnNames": [
+              "AGE",
+              "SMOKING",
+              "YELLOW_FINGERS",
+              "ANXIETY",
+              "PEER_PRESSURE",
+              "CHRONIC DISEASE",
+              "FATIGUE",
+              "ALLERGY",
+              "WHEEZING",
+              "ALCOHOL CONSUMING",
+              "COUGHING",
+              "SHORTNESS OF BREATH",
+              "SWALLOWING DIFFICULTY",
+              "CHEST PAIN"
+            ]
+          },
+          "e2": {
+            "InputColumnNames": [
+              "GENDER",
+              "AGE",
+              "SMOKING",
+              "YELLOW_FINGERS",
+              "ANXIETY",
+              "PEER_PRESSURE",
+              "CHRONIC DISEASE",
+              "FATIGUE",
+              "ALLERGY",
+              "WHEEZING",
+              "ALCOHOL CONSUMING",
+              "COUGHING",
+              "SHORTNESS OF BREATH",
+              "SWALLOWING DIFFICULTY",
+              "CHEST PAIN"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e5": {
+            "L1Regularization": 0.03125,
+            "L2Regularization": 0.03125,
+            "LabelColumnName": "LUNG_CANCER",
+            "FeatureColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "LUNG_CANCER",
+            "FeatureColumnName": "Features"
+          },
+          "e4": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 1.0,
+            "NumberOfTrees": 4,
+            "SubsampleFraction": 1.0,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "LUNG_CANCER",
+            "FeatureColumnName": "Features"
+          },
+          "e6": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "LUNG_CANCER",
+            "FeatureColumnName": "Features"
+          },
+          "e7": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "LUNG_CANCER",
+            "FeatureColumnName": "Features"
+          },
+          "e8": {
+            "LabelColumnName": "LUNG_CANCER",
+            "ScoreColumnName": "Score"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LbfgsLogisticRegressionBinary",
+        "Score": 0.91741567669278512,
+        "RuntimeInSeconds": 0.093,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e5",
+          "e0": {
+            "OutputColumnNames": [
+              "GENDER"
+            ],
+            "InputColumnNames": [
+              "GENDER"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "AGE",
+              "SMOKING",
+              "YELLOW_FINGERS",
+              "ANXIETY",
+              "PEER_PRESSURE",
+              "CHRONIC DISEASE",
+              "FATIGUE",
+              "ALLERGY",
+              "WHEEZING",
+              "ALCOHOL CONSUMING",
+              "COUGHING",
+              "SHORTNESS OF BREATH",
+              "SWALLOWING DIFFICULTY",
+              "CHEST PAIN"
+            ],
+            "InputColumnNames": [
+              "AGE",
+              "SMOKING",
+              "YELLOW_FINGERS",
+              "ANXIETY",
+              "PEER_PRESSURE",
+              "CHRONIC DISEASE",
+              "FATIGUE",
+              "ALLERGY",
+              "WHEEZING",
+              "ALCOHOL CONSUMING",
+              "COUGHING",
+              "SHORTNESS OF BREATH",
+              "SWALLOWING DIFFICULTY",
+              "CHEST PAIN"
+            ]
+          },
+          "e2": {
+            "InputColumnNames": [
+              "GENDER",
+              "AGE",
+              "SMOKING",
+              "YELLOW_FINGERS",
+              "ANXIETY",
+              "PEER_PRESSURE",
+              "CHRONIC DISEASE",
+              "FATIGUE",
+              "ALLERGY",
+              "WHEEZING",
+              "ALCOHOL CONSUMING",
+              "COUGHING",
+              "SHORTNESS OF BREATH",
+              "SWALLOWING DIFFICULTY",
+              "CHEST PAIN"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e5": {
+            "L1Regularization": 0.03125,
+            "L2Regularization": 0.03125,
+            "LabelColumnName": "LUNG_CANCER",
+            "FeatureColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "LUNG_CANCER",
+            "FeatureColumnName": "Features"
+          },
+          "e4": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 1.0,
+            "NumberOfTrees": 4,
+            "SubsampleFraction": 1.0,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "LUNG_CANCER",
+            "FeatureColumnName": "Features"
+          },
+          "e6": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "LUNG_CANCER",
+            "FeatureColumnName": "Features"
+          },
+          "e7": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "LUNG_CANCER",
+            "FeatureColumnName": "Features"
+          },
+          "e8": {
+            "LabelColumnName": "LUNG_CANCER",
+            "ScoreColumnName": "Score"
+          }
+        }
+      }
+    ],
+    "Estimators": {
+      "e0": "OneHotEncoding",
+      "e1": "ReplaceMissingValues",
+      "e2": "Concatenate",
+      "e3": "FastTreeBinary",
+      "e4": "LightGbmBinary",
+      "e5": "LbfgsLogisticRegressionBinary",
+      "e6": "SdcaLogisticRegressionBinary",
+      "e7": "FastForestBinary",
+      "e8": "Naive"
+    },
+    "Schema": "e0 * e1 * e2 * (e3 + e4 + e5 + e6 + e7 * e8)",
+    "MetricName": "Accuracy",
+    "ModelFilePath": "C:\\Users\\migue\\source\\repos\\Cancer Diagonostics\\Cancer Diagonostics\\CancerDiagonosticsMLModel2.mlnet"
+  },
+  "Type": "TrainingConfig",
+  "Version": 4,
+  "TrainingOption": {
+    "Version": 1,
+    "Type": "ClassificationTrainingOption",
+    "TrainingTime": 60,
+    "LabelColumn": "LUNG_CANCER",
+    "ValidationOption": {
+      "Version": 0,
+      "Type": "CrossValidationValidationOption",
+      "NumberOfFolds": 5
+    }
+  }
+}
