@@ -12,7 +12,7 @@ using System;
 using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("CancerDiagonosticsMLModel2_ConsoleApp1")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99485ed09d4095cb88b2fa615fffc705d9f115f6")]
 [assembly: System.Reflection.AssemblyProductAttribute("CancerDiagonosticsMLModel2_ConsoleApp1")]

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CancerDiagonosticsMLModel1_ConsoleApp1t")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99485ed09d4095cb88b2fa615fffc705d9f115f6")]
 [assembly: System.Reflection.AssemblyProductAttribute("CancerDiagonosticsMLModel1_ConsoleApp1t")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CancerDiagonosticsMLModel1_ConsoleApp1t")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

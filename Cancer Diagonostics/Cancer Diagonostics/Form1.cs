@@ -234,7 +234,7 @@ namespace Cancer_Diagonostics
                 return 1;
             
             string[] data = System.Text.RegularExpressions.Regex.Split(clipboard, @"\s+");
-
+            //a
             textBox1.Text = data[0];           
             textBox2.Text = data[1];
             textBox3.Text = data[2];
