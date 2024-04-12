@@ -155,5 +155,10 @@ namespace Cancer_Diagonostics
                 return "Invalid input. Please provide a valid decimal number between 0 and 1.";
             }
         }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

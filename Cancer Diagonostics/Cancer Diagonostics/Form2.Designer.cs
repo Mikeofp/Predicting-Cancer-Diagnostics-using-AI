@@ -74,7 +74,7 @@
             this.lungCancerToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(773, 28);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -153,9 +153,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(378, 42);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(186, 16);
+            this.label4.Size = new System.Drawing.Size(170, 16);
             this.label4.TabIndex = 10;
-            this.label4.Text = "Does s/he have yellow finger?";
+            this.label4.Text = "Do they have yellow finger?";
             // 
             // comboBox3
             // 
@@ -303,9 +303,9 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(12, 158);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(174, 16);
+            this.label11.Size = new System.Drawing.Size(158, 16);
             this.label11.TabIndex = 24;
-            this.label11.Text = "Does s/he cosume alcohol?";
+            this.label11.Text = "Do they cosume alcohol?";
             // 
             // comboBox10
             // 
@@ -324,9 +324,9 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(192, 158);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(133, 16);
+            this.label12.Size = new System.Drawing.Size(132, 16);
             this.label12.TabIndex = 26;
-            this.label12.Text = "Do s/he cough often?";
+            this.label12.Text = "Do they cough often?";
             // 
             // comboBox11
             // 
@@ -345,9 +345,10 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(334, 158);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(218, 16);
+            this.label13.Size = new System.Drawing.Size(202, 16);
             this.label13.TabIndex = 28;
-            this.label13.Text = "Does s/he have shortness of breath";
+            this.label13.Text = "Do they have shortness of breath";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // comboBox12
             // 
@@ -387,9 +388,9 @@
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(149, 217);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(77, 16);
+            this.label15.Size = new System.Drawing.Size(146, 16);
             this.label15.TabIndex = 32;
-            this.label15.Text = "Chest pain?";
+            this.label15.Text = "Do they fell Chest pain?";
             // 
             // comboBox14
             // 
@@ -399,7 +400,7 @@
             "No"});
             this.comboBox14.Location = new System.Drawing.Point(149, 236);
             this.comboBox14.Name = "comboBox14";
-            this.comboBox14.Size = new System.Drawing.Size(131, 24);
+            this.comboBox14.Size = new System.Drawing.Size(146, 24);
             this.comboBox14.TabIndex = 33;
             this.comboBox14.Text = "Select a answer";
             // 
@@ -416,7 +417,7 @@
             // 
             this.button1.Location = new System.Drawing.Point(307, 236);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 23);
+            this.button1.Size = new System.Drawing.Size(92, 24);
             this.button1.TabIndex = 35;
             this.button1.Text = "Diagnose";
             this.button1.UseVisualStyleBackColor = true;
@@ -426,7 +427,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(773, 450);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.comboBox14);

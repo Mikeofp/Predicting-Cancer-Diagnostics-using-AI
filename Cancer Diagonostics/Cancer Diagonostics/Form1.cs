@@ -12,6 +12,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Cancer_Diagonostics
 {
+
     public partial class Form1 : Form
     {
         public Form1()
@@ -151,6 +152,8 @@ namespace Cancer_Diagonostics
         {
             // Open Form2 when the second menu item is clicked
             Form2 form2 = new Form2();
+            // Hide tab headers
+           
             form2.Show();
         }
 
@@ -295,6 +298,26 @@ namespace Cancer_Diagonostics
             {
                 return "Invalid input. Please provide a valid decimal number between 0 and 1.";
             }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripLabel2_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void lungCancerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
