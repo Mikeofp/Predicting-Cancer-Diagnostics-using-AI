@@ -18,10 +18,7 @@ namespace Cancer_Diagonostics
         public Form1()
         {
             InitializeComponent();
-
-            // Wire up event handlers
-            breastCancerToolStripMenuItem.Click += toolStripMenuItem1_Click;
-            lungCancerToolStripMenuItem.Click += toolStripMenuItem2_Click;            
+       
         }
 
         private void button1_Click(object sender, EventArgs e) // the magical button
@@ -318,6 +315,234 @@ namespace Cancer_Diagonostics
         private void lungCancerToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox30_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //lung
+        }
+
+        private void label33_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox31_TextChanged(object sender, EventArgs e)
+        {
+            //lung
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //lung
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //lung
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //lung
+        }
+
+        private void comboBox9_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox8_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox7_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox5_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            //lung
+        }
+
+        private void label39_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox8_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            //lung
+        }
+
+        private void label40_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox7_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            //lung
+        }
+
+        private void label41_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox6_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            //lung
+        }
+
+        private void label42_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label43_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox9_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            //lung
+        }
+
+        private void comboBox10_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //lung
+        }
+
+        private void comboBox11_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //lung
+        }
+
+        private void comboBox12_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //lung
+        }
+
+        private void comboBox13_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //lung
+        }
+
+        private void comboBox14_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //lung
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //lung
+            if (Check() == true)
+                Diagonostics2();
+            else;
+        }
+        public bool Check() //check for wrong inputs in the datasample before inputing to the model 
+        {
+            if (@comboBox1.Text == "Male" || @comboBox1.Text == "Female")
+            {
+                try
+                {
+                    float.Parse(textBox31.Text);
+                    yesno(comboBox1.Text);
+                    yesno(comboBox2.Text);
+                    yesno(comboBox3.Text);
+                    yesno(comboBox4.Text);
+                    yesno(comboBox5.Text);
+                    yesno(comboBox6.Text);
+                    yesno(comboBox7.Text);
+                    yesno(comboBox8.Text);
+                    yesno(comboBox9.Text);
+                    yesno(comboBox10.Text);
+                    yesno(comboBox11.Text);
+                    yesno(comboBox12.Text);
+                    yesno(comboBox13.Text);
+                    yesno(comboBox14.Text);
+                }
+                catch (Exception e)
+                {
+                    label16.Text = e.Message;
+                    return false;
+                }
+                return true;
+            }
+            else { return false; }
+
+        }
+        public float yesno(string answer)
+        {
+            if (answer == "Yes")
+                return 2F;
+            else if (answer == "No")
+                return 1F;
+
+            return 0; //in this rare case 0 is fail
+
+        }
+        public int Diagonostics2()
+        {
+            var sampleData = new CancerDiagonosticsMLModel2.ModelInput()
+            {
+                GENDER = @comboBox1.Text, //@"M",
+                AGE = float.Parse(textBox31.Text),//74F,
+                SMOKING = yesno(comboBox2.Text), //2F, 
+                YELLOW_FINGERS = yesno(comboBox3.Text), //1F,
+                ANXIETY = yesno(comboBox4.Text), //1F,
+                PEER_PRESSURE = yesno(comboBox5.Text), //1F,
+                CHRONIC_DISEASE = yesno(comboBox6.Text), //2F,
+                FATIGUE = yesno(comboBox7.Text), //2F,
+                ALLERGY = yesno(comboBox8.Text), //2F,
+                WHEEZING = yesno(comboBox9.Text), //1F,
+                ALCOHOL_CONSUMING = yesno(comboBox10.Text), //1F,
+                COUGHING = yesno(comboBox11.Text), //1F,
+                SHORTNESS_OF_BREATH = yesno(comboBox12.Text), //2F,
+                SWALLOWING_DIFFICULTY = yesno(comboBox13.Text), //2F,
+                CHEST_PAIN = yesno(comboBox14.Text), //2F,
+            };
+
+            var result = CancerDiagonosticsMLModel2.Predict(sampleData);
+
+            var predictionResult = CancerDiagonosticsMLModel2.Predict(sampleData);
+
+            // Check the structure of the returned object and adjust accordingly
+
+            if (predictionResult.PredictedLabel.ToString() == "True")    //true for cancer , false for not cancer        
+                label49.Text = "Positive for Lung cancer" + " " + ConvertToPercentage(predictionResult.Probability.ToString());
+            else if (predictionResult.PredictedLabel.ToString() == "False")
+                label49.Text = "Negative for Lung cancer" + " " + ConvertToPercentage(predictionResult.Probability.ToString());
+            else
+                label49.Text = "Unsure for Lung cancer" + " " + ConvertToPercentage(predictionResult.Probability.ToString());
+
+
+            return 0;
+        }
+
+        private void label49_Click(object sender, EventArgs e)
+        {
+            //lung
+            Clipboard.SetText(label49.Text);
         }
     }
 }
