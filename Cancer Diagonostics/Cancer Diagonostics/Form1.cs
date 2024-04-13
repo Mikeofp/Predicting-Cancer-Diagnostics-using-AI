@@ -18,9 +18,18 @@ namespace Cancer_Diagonostics
         public Form1()
         {
             InitializeComponent();
-       
-        }
 
+            ToolTips();
+
+
+
+        }
+        public void ToolTips()
+        {
+            // Associate tooltips with controls
+            toolTip1.SetToolTip(label37, "Do they currently smoke?");
+            //toolTip1.SetToolTip(textBox1, "Enter your text here.");
+        }
         private void button1_Click(object sender, EventArgs e) // the magical button
         {
             if (CheckInput() == true)
@@ -543,6 +552,21 @@ namespace Cancer_Diagonostics
         {
             //lung
             Clipboard.SetText(label49.Text);
+        }
+
+        private void label38_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolTip1_Popup_1(object sender, PopupEventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
