@@ -5,6 +5,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,28 +16,37 @@ namespace Cancer_Diagonostics
 
     public partial class Form1 : Form
     {
+       
+
         public Form1()
         {
             InitializeComponent();
-
+            label50.MaximumSize = new System.Drawing.Size(900, 26);
             ToolTips();
 
-
-
+            // Save the initial size of the form and controls
+            
         }
         public void ToolTips()
         {
             // Associate tooltips with controls
             toolTip1.SetToolTip(label37, "Do they currently smoke?");
+            toolTip2.SetToolTip(label35, "Do they frequently feel anxiety?"); 
+            toolTip3.SetToolTip(label33, "What is they assigned sex at birth?");
+            toolTip4.SetToolTip(label43, "They feel like they have to do something because people around you want you to or expect you to");
+            toolTip5.SetToolTip(label42, "Health condition or disease that is persistent or otherwise long-lasting in its effects or a disease that comes with time.");
             //toolTip1.SetToolTip(textBox1, "Enter your text here.");
         }
         private void button1_Click(object sender, EventArgs e) // the magical button
         {
+            Cursor.Current = Cursors.WaitCursor;
             if (CheckInput() == true)
                 Diagonostics();
             else;
-
+            Cursor.Current = Cursors.Default;
         }
+        
+
         public int Diagonostics()
         {
             //Load sample data
@@ -80,13 +90,23 @@ namespace Cancer_Diagonostics
             var result = CancerDiagonosticsMLModel1.PredictAllLabels(sampleData);
             foreach (var score in result)
             {
-                Output += score.Key + " " + ConvertToPercentage(score.Value.ToString()) + "\r";
+                Output += LettertoName(score.Key) + " " + ConvertToPercentage(score.Value.ToString()) + "\r";
             }
 
             label1.Text = Output;
 
             return 0;
         }
+        public string LettertoName(string Letter)
+        {
+            if (Letter == "M")
+                return "Malignant";
+            else if (Letter == "B")
+                return "Benign";
+            else return Letter;
+        }
+            
+
         public bool CheckInput() //I don't want letter in my math, I have a bias against algebra
         {
             try
@@ -121,7 +141,6 @@ namespace Cancer_Diagonostics
                 float.Parse(textBox28.Text);
                 float.Parse(textBox29.Text);
                 float.Parse(textBox30.Text);
-
             }
             catch(Exception e) 
             {
@@ -464,9 +483,11 @@ namespace Cancer_Diagonostics
         private void button4_Click(object sender, EventArgs e)
         {
             //lung
+            Cursor.Current = Cursors.WaitCursor;
             if (Check() == true)
                 Diagonostics2();
             else;
+            Cursor.Current = Cursors.Default;
         }
         public bool Check() //check for wrong inputs in the datasample before inputing to the model 
         {
@@ -474,8 +495,7 @@ namespace Cancer_Diagonostics
             {
                 try
                 {
-                    float.Parse(textBox31.Text);
-                    yesno(comboBox1.Text);
+                    float.Parse(textBox31.Text);                   
                     yesno(comboBox2.Text);
                     yesno(comboBox3.Text);
                     yesno(comboBox4.Text);
@@ -488,11 +508,11 @@ namespace Cancer_Diagonostics
                     yesno(comboBox11.Text);
                     yesno(comboBox12.Text);
                     yesno(comboBox13.Text);
-                    yesno(comboBox14.Text);
+                    yesno(comboBox14.Text);                   
                 }
                 catch (Exception e)
                 {
-                    label16.Text = e.Message;
+                    label49.Text = e.Message;
                     return false;
                 }
                 return true;
@@ -506,9 +526,18 @@ namespace Cancer_Diagonostics
                 return 2F;
             else if (answer == "No")
                 return 1F;
+            else if (answer != "No" || answer != "Yes")
+                incorrectInput();
 
             return 0; //in this rare case 0 is fail
 
+        }
+        public void incorrectInput()
+        {
+            //nothing happens
+            //will though a error
+            label49.Text = "Incorrect input";
+            float.Parse (textBox1.Text);
         }
         public int Diagonostics2()
         {
@@ -565,6 +594,16 @@ namespace Cancer_Diagonostics
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label50_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label46_Click(object sender, EventArgs e)
         {
 
         }
