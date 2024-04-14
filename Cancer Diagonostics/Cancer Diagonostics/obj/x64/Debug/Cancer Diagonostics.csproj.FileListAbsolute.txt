@@ -114,3 +114,7 @@ C:\Users\migue\OneDrive\Ambiente de Trabalho\Predicting-Cancer-Diagnostics-using
 C:\Users\migue\OneDrive\Ambiente de Trabalho\Predicting-Cancer-Diagnostics-using-AI\Cancer Diagonostics\Cancer Diagonostics\obj\x64\Debug\Cancer D.B85BD4C2.Up2Date
 C:\Users\migue\OneDrive\Ambiente de Trabalho\Predicting-Cancer-Diagnostics-using-AI\Cancer Diagonostics\Cancer Diagonostics\obj\x64\Debug\Cancer Diagonostics.exe
 C:\Users\migue\OneDrive\Ambiente de Trabalho\Predicting-Cancer-Diagnostics-using-AI\Cancer Diagonostics\Cancer Diagonostics\obj\x64\Debug\Cancer Diagonostics.pdb
+C:\Users\migue\OneDrive\Ambiente de Trabalho\Predicting-Cancer-Diagnostics-using-AI\Cancer Diagonostics\Cancer Diagonostics\bin\x64\Debug\Cancer Diagonostics.exe.manifest
+C:\Users\migue\OneDrive\Ambiente de Trabalho\Predicting-Cancer-Diagnostics-using-AI\Cancer Diagonostics\Cancer Diagonostics\bin\x64\Debug\Cancer Diagonostics.application
+C:\Users\migue\OneDrive\Ambiente de Trabalho\Predicting-Cancer-Diagnostics-using-AI\Cancer Diagonostics\Cancer Diagonostics\obj\x64\Debug\Cancer Diagonostics.exe.manifest
+C:\Users\migue\OneDrive\Ambiente de Trabalho\Predicting-Cancer-Diagnostics-using-AI\Cancer Diagonostics\Cancer Diagonostics\obj\x64\Debug\Cancer Diagonostics.application
