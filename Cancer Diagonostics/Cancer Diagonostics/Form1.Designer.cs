@@ -932,7 +932,7 @@
             // 
             this.label51.AutoSize = true;
             this.label51.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label51.Location = new System.Drawing.Point(3, 458);
+            this.label51.Location = new System.Drawing.Point(3, 454);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(152, 16);
             this.label51.TabIndex = 48;
