@@ -1090,7 +1090,7 @@
             this.comboBox9.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.comboBox9.Location = new System.Drawing.Point(675, 89);
+            this.comboBox9.Location = new System.Drawing.Point(669, 88);
             this.comboBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox9.Name = "comboBox9";
             this.comboBox9.Size = new System.Drawing.Size(125, 24);
@@ -1102,7 +1102,7 @@
             // 
             this.label39.AutoSize = true;
             this.label39.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label39.Location = new System.Drawing.Point(672, 70);
+            this.label39.Location = new System.Drawing.Point(666, 69);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(119, 16);
             this.label39.TabIndex = 32;
@@ -1115,7 +1115,7 @@
             this.comboBox8.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.comboBox8.Location = new System.Drawing.Point(544, 89);
+            this.comboBox8.Location = new System.Drawing.Point(538, 88);
             this.comboBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox8.Name = "comboBox8";
             this.comboBox8.Size = new System.Drawing.Size(125, 24);
@@ -1127,7 +1127,7 @@
             // 
             this.label40.AutoSize = true;
             this.label40.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label40.Location = new System.Drawing.Point(544, 70);
+            this.label40.Location = new System.Drawing.Point(538, 69);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(92, 16);
             this.label40.TabIndex = 30;
@@ -1140,7 +1140,7 @@
             this.comboBox7.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.comboBox7.Location = new System.Drawing.Point(408, 89);
+            this.comboBox7.Location = new System.Drawing.Point(402, 88);
             this.comboBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(130, 24);
@@ -1152,7 +1152,7 @@
             // 
             this.label41.AutoSize = true;
             this.label41.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label41.Location = new System.Drawing.Point(405, 70);
+            this.label41.Location = new System.Drawing.Point(399, 69);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(133, 16);
             this.label41.TabIndex = 28;
@@ -1165,7 +1165,7 @@
             this.comboBox6.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.comboBox6.Location = new System.Drawing.Point(190, 89);
+            this.comboBox6.Location = new System.Drawing.Point(184, 88);
             this.comboBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(203, 24);
@@ -1177,7 +1177,7 @@
             // 
             this.label42.AutoSize = true;
             this.label42.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label42.Location = new System.Drawing.Point(187, 71);
+            this.label42.Location = new System.Drawing.Point(181, 70);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(206, 16);
             this.label42.TabIndex = 26;
@@ -1215,7 +1215,7 @@
             this.comboBox4.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.comboBox4.Location = new System.Drawing.Point(592, 32);
+            this.comboBox4.Location = new System.Drawing.Point(582, 32);
             this.comboBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(127, 24);
@@ -1227,7 +1227,7 @@
             // 
             this.label35.AutoSize = true;
             this.label35.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label35.Location = new System.Drawing.Point(589, 12);
+            this.label35.Location = new System.Drawing.Point(579, 12);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(138, 16);
             this.label35.TabIndex = 20;
@@ -1239,7 +1239,7 @@
             this.comboBox3.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.comboBox3.Location = new System.Drawing.Point(403, 32);
+            this.comboBox3.Location = new System.Drawing.Point(393, 32);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(183, 24);
@@ -1251,7 +1251,7 @@
             // 
             this.label36.AutoSize = true;
             this.label36.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label36.Location = new System.Drawing.Point(400, 12);
+            this.label36.Location = new System.Drawing.Point(390, 12);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(170, 16);
             this.label36.TabIndex = 18;
@@ -1261,7 +1261,7 @@
             // 
             this.label37.AutoSize = true;
             this.label37.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label37.Location = new System.Drawing.Point(273, 12);
+            this.label37.Location = new System.Drawing.Point(263, 12);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(104, 16);
             this.label37.TabIndex = 17;
@@ -1270,7 +1270,7 @@
             // textBox31
             // 
             this.textBox31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox31.Location = new System.Drawing.Point(238, 33);
+            this.textBox31.Location = new System.Drawing.Point(228, 33);
             this.textBox31.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox31.Name = "textBox31";
             this.textBox31.Size = new System.Drawing.Size(29, 22);
@@ -1281,7 +1281,7 @@
             // 
             this.label38.AutoSize = true;
             this.label38.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label38.Location = new System.Drawing.Point(235, 12);
+            this.label38.Location = new System.Drawing.Point(225, 12);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(32, 16);
             this.label38.TabIndex = 15;
@@ -1294,7 +1294,7 @@
             this.comboBox2.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.comboBox2.Location = new System.Drawing.Point(273, 32);
+            this.comboBox2.Location = new System.Drawing.Point(263, 32);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(124, 24);

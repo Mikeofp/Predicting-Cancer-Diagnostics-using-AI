@@ -25,10 +25,15 @@ namespace Cancer_Diagonostics
         [STAThread]
         static void Main()
         {
+            // this line is to allow the application to be sharp as possible i.e match the moniter quality of pixels or in short words it makes the application HD
+            if(Environment.OSVersion.Version.Major >= 6) { SetProcessDPIAware(); }
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
         }
-        // Execute this in x64, this AI model is very picky 
+        //Execute this in x64, this AI model is very picky 
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        private static extern bool SetProcessDPIAware();
     }
 }
