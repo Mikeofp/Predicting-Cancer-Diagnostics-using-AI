@@ -30,10 +30,10 @@ namespace Cancer_Diagonostics
         public void ToolTips()
         {
             // Associate tooltips with controls
-            toolTip1.SetToolTip(label37, "Do they currently smoke?");
-            toolTip2.SetToolTip(label35, "Do they frequently feel anxiety?"); 
-            toolTip3.SetToolTip(label33, "What is they assigned sex at birth?");
-            toolTip4.SetToolTip(label43, "They feel like they have to do something because people around you want you to or expect you to");
+            toolTip1.SetToolTip(label37, "Does the patient currently smoke?");
+            toolTip2.SetToolTip(label35, "Does the patient frequently feel anxiety?"); 
+            //toolTip3.SetToolTip(label33, "What is they assigned sex at birth?");
+            toolTip4.SetToolTip(label43, "Does the patient feel like they have to do something because people around you want you to or expect you to");
             toolTip5.SetToolTip(label42, "Health condition or disease that is persistent or otherwise long-lasting in its effects or a disease that comes with time.");
             //toolTip1.SetToolTip(textBox1, "Enter your text here.");
         }
@@ -493,50 +493,57 @@ namespace Cancer_Diagonostics
         {
             if (@comboBox1.Text == "Male" || @comboBox1.Text == "Female")
             {
-                try
-                {
-                    float.Parse(textBox31.Text);                   
-                    yesno(comboBox2.Text);
-                    yesno(comboBox3.Text);
-                    yesno(comboBox4.Text);
-                    yesno(comboBox5.Text);
-                    yesno(comboBox6.Text);
-                    yesno(comboBox7.Text);
-                    yesno(comboBox8.Text);
-                    yesno(comboBox9.Text);
-                    yesno(comboBox10.Text);
-                    yesno(comboBox11.Text);
-                    yesno(comboBox12.Text);
-                    yesno(comboBox13.Text);
-                    yesno(comboBox14.Text);                   
-                }
-                catch (Exception e)
-                {
-                    label49.Text = e.Message;
-                    return false;
-                }
-                return true;
+                
+                    try
+                    {
+                        float.Parse(textBox31.Text);                       
+                        yesno(comboBox2.Text);
+                        yesno(comboBox3.Text);
+                        yesno(comboBox4.Text);
+                        yesno(comboBox5.Text);
+                        yesno(comboBox6.Text);
+                        yesno(comboBox7.Text);
+                        yesno(comboBox8.Text);
+                        yesno(comboBox9.Text);
+                        yesno(comboBox10.Text);
+                        yesno(comboBox11.Text);
+                        yesno(comboBox12.Text);
+                        yesno(comboBox13.Text);
+                        yesno(comboBox14.Text);
+                    }
+                    catch (Exception e)
+                    {
+                        label49.Text = "Incorrect inputs";
+                        return false;
+                    }
+                    return true;              
+                                                               
+               
             }
-            else { return false; }
+            else
+            {
+                label49.Text = "Please select or assigned sex at birth";
+            }
+                return false;
 
         }
         public float yesno(string answer)
         {
-            if (answer == "Yes")
-                return 2F;
-            else if (answer == "No")
-                return 1F;
-            else if (answer != "No" || answer != "Yes")
+           if (answer == "Yes")
+               return 2F;
+           else if (answer == "No")
+               return 1F;
+           else if (answer != "No" || answer != "Yes")
                 incorrectInput();
 
             return 0; //in this rare case 0 is fail
 
         }
+        
         public void incorrectInput()
         {
             //nothing happens
-            //will though a error
-            label49.Text = "Incorrect input";
+            //will though a error          
             float.Parse (textBox1.Text);
         }
         public int Diagonostics2()
