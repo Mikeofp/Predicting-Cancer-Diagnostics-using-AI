@@ -1,8 +1,31 @@
 # Predicting-Cancer-Diagnostics-using-AI
-Final Year Project Coursework for the University of Plymouth
+Final Year Project Coursework for the University of Plymouth COMP3000 2023/2024
+
+Cancer diagnosis remains a formidable challenge in healthcare, necessitating accurate and timely detection for effective treatment and improved patient outcomes. With recent advancements in AI and machine learning (ML), there is growing interest in leveraging these technologies to enhance diagnostic capabilities and revolutionize healthcare practices.
+
+This project explores the potential of AI in predicting cancer diagnostics while also considering ethical and professional considerations, with the overarching goal of demonstrating its potential uses in cancer diagnostics.
+
+The desktop application developed in this project will predict two types of cancers: breast and lung cancer. the former design is to be used by a doctor, and it will predict based on the doctor's input(measurements) whether the tumour is cancerous or not. while the latter is designed for medical staff in general, and it will be predicted based on a questionnaire.
 
 
-User Guides 
+## Before using the application!
+The Dataset used to train the AIs are not mine, they are under CC laws. 
+The Breast Cancer Dataset came from: https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic
+it is from a study made by William Wolberg, Olvi Mangasarian, Nick Street adn W. Street named "Nuclear feature extraction for breast tumor diagnosis" 1993 study link: https://www.semanticscholar.org/paper/Nuclear-feature-extraction-for-breast-tumor-Street-Wolberg/53f0fbb425bc14468eb3bf96b2e1d41ba8087f36
+
+The Lung cancer dataset came from: https://www.kaggle.com/datasets/mysarahmadbhat/lung-cancer 
+
+Both dataset can be used freely as long it follow CC BY-NC-SA 4.0, link: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en. That states that You are free to:
+Share — copy and redistribute the material in any medium or format
+Adapt — remix, transform, and build upon the material
+The licensor cannot revoke these freedoms as long as you follow the license terms.
+Under the following terms:
+Attribution — You must give appropriate credit , provide a link to the license, and indicate if changes were made . You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+NonCommercial — You may not use the material for commercial purposes .
+ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
+No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+
+## User Guides 
 Installation guide 
 Source code: https://github.com/Mikeofp/Predicting-Cancer-Diagnostics-using-AI
 Minimum system requirements
